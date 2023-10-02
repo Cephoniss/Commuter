@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvqs1j45jgg2r"]
+
+[ext_resource type="AudioStream" uid="uid://5wrhg6vpud6h" path="res://sfx/MenuClearSFX.ogg" id="1_m6dfs"]
+
+[node name="SFX" type="AudioStreamPlayer"]
+stream = ExtResource("1_m6dfs")

@@ -1,0 +1,135 @@
+[gd_scene load_steps=12 format=3 uid="uid://5q8micn8uv5g"]
+
+[ext_resource type="PackedScene" uid="uid://beblu21nmkjga" path="res://player.tscn" id="1_f4yen"]
+[ext_resource type="Texture2D" uid="uid://bqkhdq85v6gdf" path="res://levelmaps/Lifthall.png" id="1_yrwup"]
+[ext_resource type="Script" path="res://LiftCanvas.gd" id="2_1fj5n"]
+[ext_resource type="PackedScene" uid="uid://ddm7b03qx5bt2" path="res://collision_space.tscn" id="2_k13iv"]
+[ext_resource type="PackedScene" uid="uid://8fijesafb8tg" path="res://obstacle_person.tscn" id="4_ubusp"]
+[ext_resource type="Script" path="res://obstacle_person.gd" id="6_urdnu"]
+[ext_resource type="PackedScene" uid="uid://cwx4c1cjrc08h" path="res://bgm.tscn" id="7_6w5pm"]
+[ext_resource type="PackedScene" uid="uid://bvqs1j45jgg2r" path="res://sfx.tscn" id="8_jq1ax"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_s1noe"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_jend5"]
+diffuse_texture = ExtResource("1_yrwup")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ouyw"]
+size = Vector2(498, 177)
+
+[node name="World" type="Node2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+rotation = -3.14159
+scale = Vector2(500, 400)
+mesh = SubResource("QuadMesh_s1noe")
+texture = SubResource("CanvasTexture_jend5")
+
+[node name="LiftCanvas" type="CanvasLayer" parent="."]
+script = ExtResource("2_1fj5n")
+
+[node name="Label" type="Label" parent="LiftCanvas"]
+offset_left = 141.0
+offset_top = 51.0
+offset_right = 266.0
+offset_bottom = 77.0
+scale = Vector2(2, 2)
+text = "Get to the Lift"
+uppercase = true
+
+[node name="Player" parent="." instance=ExtResource("1_f4yen")]
+position = Vector2(163, 40)
+
+[node name="CollisionSpace" parent="." instance=ExtResource("2_k13iv")]
+position = Vector2(-113, -11)
+scale = Vector2(3.48, 1)
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="ObstaclePerson" parent="Obstacles" instance=ExtResource("4_ubusp")]
+position = Vector2(-134, 49)
+
+[node name="ObstaclePerson2" parent="Obstacles" instance=ExtResource("4_ubusp")]
+position = Vector2(-108, 99)
+
+[node name="ObstaclePerson3" parent="Obstacles" instance=ExtResource("4_ubusp")]
+position = Vector2(-87, 177)
+
+[node name="ObstaclePerson4" parent="Obstacles" instance=ExtResource("4_ubusp")]
+position = Vector2(-171, 171)
+
+[node name="ObstaclePerson5" parent="Obstacles" instance=ExtResource("4_ubusp")]
+position = Vector2(-28, 2)
+
+[node name="ObstaclePerson6" parent="Obstacles" instance=ExtResource("4_ubusp")]
+position = Vector2(16, 25)
+
+[node name="ObstaclePerson7" parent="Obstacles" instance=ExtResource("4_ubusp")]
+position = Vector2(-132, 163)
+
+[node name="ObstaclePerson8" parent="Obstacles" instance=ExtResource("4_ubusp")]
+position = Vector2(33, 165)
+
+[node name="ObstaclePerson9" parent="Obstacles" instance=ExtResource("4_ubusp")]
+position = Vector2(-27, 63)
+script = ExtResource("6_urdnu")
+move_dir = Vector2(-40, 0)
+
+[node name="ObstaclePerson10" parent="Obstacles" instance=ExtResource("4_ubusp")]
+position = Vector2(60, 38)
+
+[node name="ObstaclePerson11" parent="Obstacles" instance=ExtResource("4_ubusp")]
+position = Vector2(102, 19)
+
+[node name="ObstaclePerson12" parent="Obstacles" instance=ExtResource("4_ubusp")]
+position = Vector2(180, 153)
+
+[node name="ObstaclePerson13" parent="Obstacles" instance=ExtResource("4_ubusp")]
+position = Vector2(226, 169)
+
+[node name="ObstaclePerson14" parent="Obstacles" instance=ExtResource("4_ubusp")]
+position = Vector2(229, 30)
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="IWall3" type="StaticBody2D" parent="Environment"]
+position = Vector2(284, 259)
+scale = Vector2(0.157689, 1.84934)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/IWall3"]
+position = Vector2(0, -110.5)
+shape = SubResource("RectangleShape2D_3ouyw")
+
+[node name="IWall2" type="StaticBody2D" parent="Environment"]
+position = Vector2(-284, 246)
+scale = Vector2(0.157689, 1.84934)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/IWall2"]
+position = Vector2(0, -110.5)
+shape = SubResource("RectangleShape2D_3ouyw")
+
+[node name="IWall4" type="StaticBody2D" parent="Environment"]
+position = Vector2(2, 390)
+scale = Vector2(1.30286, 0.2688)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/IWall4"]
+position = Vector2(-1.53509, -662.203)
+shape = SubResource("RectangleShape2D_3ouyw")
+
+[node name="IWall" type="StaticBody2D" parent="Environment"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/IWall"]
+position = Vector2(0, -110.5)
+shape = SubResource("RectangleShape2D_3ouyw")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="BGM" parent="." instance=ExtResource("7_6w5pm")]
+
+[node name="SFX" parent="." instance=ExtResource("8_jq1ax")]
+
+[node name="Timer2" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="LiftCanvas" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="CollisionSpace" method="_on_timer_2_timeout"]

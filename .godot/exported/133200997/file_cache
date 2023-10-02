@@ -1,0 +1,14 @@
+res://bgm.tscn::68309b3333e536018977f21809c04aad::1696206804::res://.godot/exported/133200997/export-e1fc0fbc99fd64ce59e6bead5af57482-bgm.scn
+res://collision_space.tscn::a3f9626eacd12c173971823f5e21d1be::1696249298::res://.godot/exported/133200997/export-11424dc1c021c5655f81612ba3a561a8-collision_space.scn
+res://default_bus_layout.tres::d13821f411172aec9a3113ba78955088::1696187439::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
+res://game_over.tscn::b861b36e6974d1d4af3ea7ed459e10b7::1696249298::res://.godot/exported/133200997/export-d8e4acb474e0f28479495aaad84d873f-game_over.scn
+res://main_menu.tscn::ef3e902a143b662b90987a51ff8cb8a3::1696249297::res://.godot/exported/133200997/export-8b03550a1e82db90fe95208a9e9dbb82-main_menu.scn
+res://obstacle_car.tscn::ff9d1b11e404c9dd497a63adbef267cc::1696249298::res://.godot/exported/133200997/export-00f88a93eded1fd64984bbb22054b397-obstacle_car.scn
+res://obstacle_person.tscn::c6fe2588e100eb632a1d2edd253a8a39::1696249298::res://.godot/exported/133200997/export-7c9d7dc542d6ed856fdc0346ed3ec7c5-obstacle_person.scn
+res://player.tscn::b5e20317f252a2347b703ba7c1f3012d::1696249298::res://.godot/exported/133200997/export-36a25e342948d0ceacc500772b5412b3-player.scn
+res://player_car.tscn::dc60e4bd4e4d707b99d9e35f7ebde8cf::1696249298::res://.godot/exported/133200997/export-ef0c68f50652960059f93fcdbec4d89d-player_car.scn
+res://game_end_screen.tscn::bec6c7ace9e39e7a1f802bd73f7743f9::1696249298::res://.godot/exported/133200997/export-d97c6f3df6acd916bfb35730390e54fe-game_end_screen.scn
+res://sfx.tscn::cc9504441eb74014b668f29a12b88309::1696213435::res://.godot/exported/133200997/export-6da6afef858ec1b8cfe7a27c3f3d4aac-sfx.scn
+res://world.tscn::ae5006ae0c59cd5a2d4c73f8488147f1::1696249298::res://.godot/exported/133200997/export-76e0adcbc83681695885bae615f516ae-world.scn
+res://world_2.tscn::8d83bad3cc5423a91f1b2d4a216b6ce9::1696249298::res://.godot/exported/133200997/export-d8de182d6c82c623654cfc9c3d3dcbc0-world_2.scn
+res://world_3.tscn::5b3021d836f25a96f33b6d801461b11a::1696249298::res://.godot/exported/133200997/export-27210705a1e570edb9ad1a553936a65a-world_3.scn

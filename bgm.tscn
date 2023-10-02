@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwx4c1cjrc08h"]
+
+[ext_resource type="AudioStream" uid="uid://dyd07yujyanb7" path="res://sfx/commuterbgm.ogg" id="1_gxuh5"]
+
+[node name="BGM" type="AudioStreamPlayer"]
+stream = ExtResource("1_gxuh5")
+volume_db = -8.808
+autoplay = true

@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://8fijesafb8tg"]
+
+[ext_resource type="Texture2D" uid="uid://cjji6j15ihje5" path="res://levelmaps/Shadoeperson.png" id="1_740vi"]
+[ext_resource type="Script" path="res://Person.gd" id="1_ea7xj"]
+[ext_resource type="AudioStream" uid="uid://yxrg0siubl8s" path="res://sfx/oof.ogg" id="3_5htvq"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_tw3ra"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_dxxgp"]
+diffuse_texture = ExtResource("1_740vi")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v1kv6"]
+radius = 2.0
+height = 9.75
+
+[node name="ObstaclePerson" type="Node2D"]
+
+[node name="Person" type="Area2D" parent="."]
+scale = Vector2(8, 8)
+script = ExtResource("1_ea7xj")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Person"]
+rotation = 3.14159
+scale = Vector2(5, 10)
+mesh = SubResource("QuadMesh_tw3ra")
+texture = SubResource("CanvasTexture_dxxgp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Person"]
+shape = SubResource("CapsuleShape2D_v1kv6")
+
+[node name="OofSoundClip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5htvq")
+bus = &"SFX"
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Person" to="Person" method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="Person" method="_on_timer_timeout"]

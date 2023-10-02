@@ -1,0 +1,853 @@
+[gd_scene load_steps=12 format=3 uid="uid://dn80sirmheaxq"]
+
+[ext_resource type="Texture2D" uid="uid://dbjvp563cdqwi" path="res://levelmaps/StreetParking.png" id="1_oxww4"]
+[ext_resource type="PackedScene" uid="uid://c5udk85vstkfd" path="res://obstacle_car.tscn" id="3_23pgl"]
+[ext_resource type="Script" path="res://obstacle_car.gd" id="4_ofh7f"]
+[ext_resource type="Script" path="res://ParkingSpace.gd" id="5_8tqxq"]
+[ext_resource type="PackedScene" uid="uid://8pi2h4p7frak" path="res://player_car.tscn" id="5_dg13y"]
+[ext_resource type="PackedScene" uid="uid://cwx4c1cjrc08h" path="res://bgm.tscn" id="6_ml0d0"]
+[ext_resource type="PackedScene" uid="uid://bvqs1j45jgg2r" path="res://sfx.tscn" id="7_x0g0y"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_lylws"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_lqjg3"]
+diffuse_texture = ExtResource("1_oxww4")
+specular_color = Color(0.180392, 0.180392, 0.180392, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_her28"]
+size = Vector2(2072.5, 758)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhvia"]
+size = Vector2(34, 68)
+
+[node name="World 3" type="Node2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(825, 746)
+rotation = 0.47822
+scale = Vector2(1800, 1800)
+mesh = SubResource("QuadMesh_lylws")
+texture = SubResource("CanvasTexture_lqjg3")
+
+[node name="Obstacles" type="Node2D" parent="."]
+position = Vector2(3, -6)
+
+[node name="ObstacleCar" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(983, 1576)
+
+[node name="ObstacleCar2" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(982, 1622)
+
+[node name="ObstacleCar3" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(982, 1666)
+
+[node name="ObstacleCar4" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(982, 1708)
+
+[node name="ObstacleCar5" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(982, 1750)
+
+[node name="ObstacleCar6" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(982, 1790)
+
+[node name="ObstacleCar7" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(983, 1831)
+
+[node name="ObstacleCar71" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(907, 787)
+
+[node name="ObstacleCar78" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(909, 739)
+
+[node name="ObstacleCar79" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(909, 694)
+
+[node name="ObstacleCar72" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(998, 690)
+
+[node name="ObstacleCar73" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(998, 734)
+
+[node name="ObstacleCar74" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(998, 776)
+
+[node name="ObstacleCar75" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(998, 818)
+
+[node name="ObstacleCar76" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(998, 858)
+
+[node name="ObstacleCar77" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(999, 899)
+
+[node name="ObstacleCar80" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(631, 1038)
+
+[node name="ObstacleCar86" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(633, 994)
+
+[node name="ObstacleCar87" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(633, 951)
+
+[node name="ObstacleCar88" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(633, 908)
+
+[node name="ObstacleCar81" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(628, 1084)
+
+[node name="ObstacleCar176" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(560, 933)
+
+[node name="ObstacleCar177" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(562, 889)
+
+[node name="ObstacleCar178" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(562, 846)
+
+[node name="ObstacleCar179" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(562, 803)
+
+[node name="ObstacleCar180" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(557, 979)
+
+[node name="ObstacleCar181" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(575, 620)
+
+[node name="ObstacleCar182" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(577, 576)
+
+[node name="ObstacleCar183" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(577, 533)
+
+[node name="ObstacleCar184" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(577, 490)
+
+[node name="ObstacleCar190" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(556, 1277)
+
+[node name="ObstacleCar191" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(556, 1234)
+
+[node name="ObstacleCar192" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(556, 1191)
+
+[node name="ObstacleCar193" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(653, 577)
+
+[node name="ObstacleCar194" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(653, 534)
+
+[node name="ObstacleCar195" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(653, 491)
+
+[node name="ObstacleCar197" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(908, 559)
+
+[node name="ObstacleCar198" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(908, 516)
+
+[node name="ObstacleCar199" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(908, 473)
+
+[node name="ObstacleCar203" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(911, 429)
+
+[node name="ObstacleCar204" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(911, 386)
+
+[node name="ObstacleCar205" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(911, 343)
+
+[node name="ObstacleCar200" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1012, 493)
+
+[node name="ObstacleCar206" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1012, 552)
+
+[node name="ObstacleCar207" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(916, 297)
+
+[node name="ObstacleCar208" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(957, 655)
+script = ExtResource("4_ofh7f")
+move_dir = Vector2(0, 1000)
+
+[node name="ObstacleCar209" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(947, 1045)
+script = ExtResource("4_ofh7f")
+move_dir = Vector2(0, 1000)
+
+[node name="ObstacleCar201" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1012, 381)
+
+[node name="ObstacleCar202" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1014, 332)
+
+[node name="ObstacleCar196" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(615, 560)
+
+[node name="ObstacleCar185" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(572, 666)
+
+[node name="ObstacleCar82" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(621, 1122)
+
+[node name="ObstacleCar83" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(621, 1164)
+
+[node name="ObstacleCar89" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(631, 766)
+
+[node name="ObstacleCar92" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(634, 716)
+
+[node name="ObstacleCar93" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(566, 719)
+
+[node name="ObstacleCar175" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(565, 761)
+
+[node name="ObstacleCar90" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(629, 824)
+
+[node name="ObstacleCar91" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(629, 866)
+
+[node name="ObstacleCar84" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(621, 1204)
+
+[node name="ObstacleCar85" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(622, 1245)
+
+[node name="ObstacleCar186" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(551, 1023)
+
+[node name="ObstacleCar187" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(552, 1064)
+
+[node name="ObstacleCar188" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(552, 1106)
+
+[node name="ObstacleCar189" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(553, 1147)
+
+[node name="ObstacleCar8" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(880, 1775)
+
+[node name="ObstacleCar9" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(880, 1733)
+
+[node name="ObstacleCar10" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(881, 1691)
+
+[node name="ObstacleCar23" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(997, 943)
+
+[node name="ObstacleCar24" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(996, 989)
+
+[node name="ObstacleCar25" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(994, 1032)
+
+[node name="ObstacleCar26" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(994, 1073)
+
+[node name="ObstacleCar27" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(991, 1115)
+
+[node name="ObstacleCar28" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(988, 1156)
+
+[node name="ObstacleCar29" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(989, 1197)
+
+[node name="ObstacleCar33" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(907, 833)
+
+[node name="ObstacleCar34" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(906, 879)
+
+[node name="ObstacleCar35" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(904, 922)
+
+[node name="ObstacleCar36" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(904, 963)
+
+[node name="ObstacleCar37" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(901, 1005)
+
+[node name="ObstacleCar38" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(898, 1046)
+
+[node name="ObstacleCar39" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(899, 1087)
+
+[node name="ObstacleCar40" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1596, 808)
+rotation = 0.0349066
+
+[node name="ObstacleCar41" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1595, 854)
+rotation = 0.0349066
+
+[node name="ObstacleCar42" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1593, 897)
+rotation = 0.0349066
+
+[node name="ObstacleCar43" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1593, 938)
+rotation = 0.0349066
+
+[node name="ObstacleCar44" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1590, 980)
+rotation = 0.0349066
+
+[node name="ObstacleCar45" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1587, 1021)
+rotation = 0.0349066
+
+[node name="ObstacleCar46" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1584, 1064)
+rotation = 0.0349066
+
+[node name="ObstacleCar94" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(997, 1498)
+rotation = 0.0349066
+
+[node name="ObstacleCar95" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1041, 646)
+rotation = 1.47131
+
+[node name="ObstacleCar96" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1085, 644)
+rotation = 1.47131
+
+[node name="ObstacleCar97" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1152, 637)
+rotation = 1.47131
+
+[node name="ObstacleCar98" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1199, 634)
+rotation = 1.47131
+
+[node name="ObstacleCar99" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1246, 630)
+rotation = 1.47131
+
+[node name="ObstacleCar100" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1311, 625)
+rotation = 1.47131
+
+[node name="ObstacleCar101" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1361, 621)
+rotation = 1.47131
+
+[node name="ObstacleCar102" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1405, 617)
+rotation = 1.47131
+
+[node name="ObstacleCar103" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1446, 614)
+rotation = 1.47131
+
+[node name="ObstacleCar104" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1497, 610)
+rotation = 1.47131
+
+[node name="ObstacleCar105" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1544, 606)
+rotation = 1.47131
+
+[node name="ObstacleCar106" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1590, 603)
+rotation = 1.47131
+
+[node name="ObstacleCar107" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1036, 593)
+rotation = 1.47131
+
+[node name="ObstacleCar108" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1086, 589)
+rotation = 1.47131
+
+[node name="ObstacleCar109" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1130, 585)
+rotation = 1.47131
+
+[node name="ObstacleCar110" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1171, 582)
+rotation = 1.47131
+
+[node name="ObstacleCar111" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1222, 578)
+rotation = 1.47131
+
+[node name="ObstacleCar112" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1269, 574)
+rotation = 1.47131
+
+[node name="ObstacleCar145" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(636, 1277)
+rotation = 1.47131
+
+[node name="ObstacleCar146" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(686, 1273)
+rotation = 1.47131
+
+[node name="ObstacleCar147" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(730, 1269)
+rotation = 1.47131
+
+[node name="ObstacleCar148" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(771, 1266)
+rotation = 1.47131
+
+[node name="ObstacleCar149" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(822, 1262)
+rotation = 1.47131
+
+[node name="ObstacleCar150" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(869, 1258)
+rotation = 1.47131
+
+[node name="ObstacleCar151" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(626, 1348)
+rotation = 1.47131
+
+[node name="ObstacleCar152" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(676, 1344)
+rotation = 1.47131
+
+[node name="ObstacleCar153" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(720, 1340)
+rotation = 1.47131
+
+[node name="ObstacleCar154" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(761, 1337)
+rotation = 1.47131
+
+[node name="ObstacleCar155" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(812, 1333)
+rotation = 1.47131
+
+[node name="ObstacleCar156" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(859, 1329)
+rotation = 1.47131
+
+[node name="ObstacleCar157" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(349, 1368)
+rotation = 1.47131
+
+[node name="ObstacleCar158" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(399, 1364)
+rotation = 1.47131
+
+[node name="ObstacleCar159" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(443, 1360)
+rotation = 1.47131
+
+[node name="ObstacleCar160" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(484, 1357)
+rotation = 1.47131
+
+[node name="ObstacleCar161" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(535, 1353)
+rotation = 1.47131
+
+[node name="ObstacleCar162" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(582, 1349)
+rotation = 1.47131
+
+[node name="ObstacleCar163" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(190, 1297)
+rotation = 1.47131
+
+[node name="ObstacleCar164" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(240, 1293)
+rotation = 1.47131
+
+[node name="ObstacleCar165" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(284, 1289)
+rotation = 1.47131
+
+[node name="ObstacleCar166" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(325, 1286)
+rotation = 1.47131
+
+[node name="ObstacleCar167" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(376, 1282)
+rotation = 1.47131
+
+[node name="ObstacleCar168" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(423, 1278)
+rotation = 1.47131
+
+[node name="ObstacleCar169" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(468, 1276)
+rotation = 1.47131
+
+[node name="ObstacleCar170" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(217, 1346)
+rotation = 1.47131
+
+[node name="ObstacleCar171" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(184, 1378)
+rotation = 1.47131
+
+[node name="ObstacleCar172" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(517, 1275)
+rotation = 1.47131
+
+[node name="ObstacleCar173" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(258, 1374)
+rotation = 1.47131
+
+[node name="ObstacleCar174" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(305, 1370)
+rotation = 1.47131
+
+[node name="ObstacleCar113" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1315, 571)
+rotation = 1.47131
+
+[node name="ObstacleCar114" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1356, 567)
+rotation = 1.47131
+
+[node name="ObstacleCar121" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(675, 689)
+rotation = 1.47131
+
+[node name="ObstacleCar122" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(726, 685)
+rotation = 1.47131
+
+[node name="ObstacleCar123" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(773, 681)
+rotation = 1.47131
+
+[node name="ObstacleCar124" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(819, 678)
+rotation = 1.47131
+
+[node name="ObstacleCar125" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(860, 674)
+rotation = 1.47131
+
+[node name="ObstacleCar126" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(675, 610)
+rotation = 1.47131
+
+[node name="ObstacleCar127" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(726, 606)
+rotation = 1.47131
+
+[node name="ObstacleCar128" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(773, 602)
+rotation = 1.47131
+
+[node name="ObstacleCar129" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(819, 599)
+rotation = 1.47131
+
+[node name="ObstacleCar130" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(860, 595)
+rotation = 1.47131
+
+[node name="ObstacleCar115" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1406, 563)
+rotation = 1.47131
+
+[node name="ObstacleCar116" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1450, 559)
+rotation = 1.47131
+
+[node name="ObstacleCar117" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1491, 556)
+rotation = 1.47131
+
+[node name="ObstacleCar118" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1542, 552)
+rotation = 1.47131
+
+[node name="ObstacleCar119" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1589, 548)
+rotation = 1.47131
+
+[node name="ObstacleCar120" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1621, 573)
+rotation = 1.47131
+
+[node name="ObstacleCar30" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(898, 1229)
+
+[node name="ObstacleCar31" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(897, 1182)
+
+[node name="ObstacleCar32" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(897, 1139)
+
+[node name="ObstacleCar11" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(884, 1651)
+
+[node name="ObstacleCar12" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(885, 1599)
+
+[node name="ObstacleCar13" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(887, 1551)
+
+[node name="ObstacleCar14" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(887, 1506)
+
+[node name="ObstacleCar15" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(890, 1452)
+
+[node name="ObstacleCar16" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(892, 1403)
+
+[node name="ObstacleCar17" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(892, 1352)
+
+[node name="ObstacleCar18" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(982, 1442)
+
+[node name="ObstacleCar19" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(982, 1397)
+
+[node name="ObstacleCar20" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(985, 1343)
+
+[node name="ObstacleCar21" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(987, 1294)
+
+[node name="ObstacleCar22" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(987, 1243)
+
+[node name="ObstacleCar47" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1017, 1539)
+rotation = -2.27416
+
+[node name="ObstacleCar48" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1058, 1510)
+rotation = -2.27416
+
+[node name="ObstacleCar51" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1162, 1436)
+rotation = -2.27416
+
+[node name="ObstacleCar52" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1197, 1411)
+rotation = -2.27416
+
+[node name="ObstacleCar53" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1232, 1387)
+rotation = -2.27416
+
+[node name="ObstacleCar54" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1270, 1362)
+rotation = -2.27416
+
+[node name="ObstacleCar49" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1093, 1485)
+rotation = -2.27416
+
+[node name="ObstacleCar50" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1128, 1463)
+rotation = -2.27416
+
+[node name="ObstacleCar131" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1024, 1457)
+rotation = -2.27416
+
+[node name="ObstacleCar132" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1128, 1383)
+rotation = -2.27416
+
+[node name="ObstacleCar133" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1163, 1358)
+rotation = -2.27416
+
+[node name="ObstacleCar134" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1198, 1334)
+rotation = -2.27416
+
+[node name="ObstacleCar135" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1236, 1309)
+rotation = -2.27416
+
+[node name="ObstacleCar136" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1059, 1432)
+rotation = -2.27416
+
+[node name="ObstacleCar137" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1094, 1410)
+rotation = -2.27416
+
+[node name="ObstacleCar138" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1528, 1114)
+rotation = -2.27416
+
+[node name="ObstacleCar139" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1375, 1204)
+rotation = -2.27416
+
+[node name="ObstacleCar140" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1410, 1179)
+rotation = -2.27416
+
+[node name="ObstacleCar141" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1445, 1155)
+rotation = -2.27416
+
+[node name="ObstacleCar142" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1483, 1130)
+rotation = -2.27416
+
+[node name="ObstacleCar143" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1306, 1253)
+rotation = -2.27416
+
+[node name="ObstacleCar144" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1341, 1231)
+rotation = -2.27416
+
+[node name="ObstacleCar55" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1310, 1339)
+rotation = -2.15374
+
+[node name="ObstacleCar56" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1351, 1310)
+rotation = -2.15374
+
+[node name="ObstacleCar57" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1455, 1236)
+rotation = -2.15374
+
+[node name="ObstacleCar58" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1490, 1211)
+rotation = -2.15374
+
+[node name="ObstacleCar59" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1525, 1187)
+rotation = -2.15374
+
+[node name="ObstacleCar60" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1563, 1162)
+rotation = -2.15374
+
+[node name="ObstacleCar61" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1386, 1285)
+rotation = -2.15374
+
+[node name="ObstacleCar62" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1421, 1263)
+rotation = -2.15374
+
+[node name="ObstacleCar63" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1643, 1093)
+rotation = -3.11018
+
+[node name="ObstacleCar64" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1610, 1134)
+rotation = -2.27242
+
+[node name="ObstacleCar65" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1645, 1043)
+rotation = -3.11018
+
+[node name="ObstacleCar66" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1646, 988)
+rotation = -3.11018
+
+[node name="ObstacleCar67" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1634, 927)
+rotation = -3.2306
+
+[node name="ObstacleCar68" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1637, 872)
+rotation = -3.2306
+
+[node name="ObstacleCar69" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1638, 817)
+rotation = -3.2306
+
+[node name="ObstacleCar70" parent="Obstacles" instance=ExtResource("3_23pgl")]
+position = Vector2(1657, 768)
+rotation = -3.2306
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="IWall" type="StaticBody2D" parent="Environment"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/IWall"]
+position = Vector2(852, -92)
+shape = SubResource("RectangleShape2D_her28")
+
+[node name="IWall6" type="StaticBody2D" parent="Environment"]
+position = Vector2(-992, 231)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/IWall6"]
+position = Vector2(852, -92)
+shape = SubResource("RectangleShape2D_her28")
+
+[node name="IWall7" type="StaticBody2D" parent="Environment"]
+position = Vector2(1227, 282)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/IWall7"]
+position = Vector2(852, -92)
+shape = SubResource("RectangleShape2D_her28")
+
+[node name="IWall2" type="StaticBody2D" parent="Environment"]
+position = Vector2(41, 2179)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/IWall2"]
+position = Vector2(852, -92)
+shape = SubResource("RectangleShape2D_her28")
+
+[node name="IWall5" type="StaticBody2D" parent="Environment"]
+position = Vector2(-1013, 1852)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/IWall5"]
+position = Vector2(852, -92)
+shape = SubResource("RectangleShape2D_her28")
+
+[node name="IWall3" type="StaticBody2D" parent="Environment"]
+position = Vector2(-969, 919)
+scale = Vector2(0.611617, 5.83061)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/IWall3"]
+position = Vector2(852, -92)
+shape = SubResource("RectangleShape2D_her28")
+
+[node name="IWall4" type="StaticBody2D" parent="Environment"]
+position = Vector2(1431, 883)
+scale = Vector2(0.611617, 5.83061)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/IWall4"]
+position = Vector2(852, -92)
+shape = SubResource("RectangleShape2D_her28")
+
+[node name="ParkingSpace" type="Area2D" parent="."]
+script = ExtResource("5_8tqxq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkingSpace"]
+position = Vector2(1024, 432)
+shape = SubResource("RectangleShape2D_lhvia")
+
+[node name="PlayerCar" parent="." instance=ExtResource("5_dg13y")]
+position = Vector2(936, 1383)
+scale = Vector2(0.25, 0.25)
+
+[node name="BGM" parent="." instance=ExtResource("6_ml0d0")]
+
+[node name="SFX" parent="." instance=ExtResource("7_x0g0y")]
+
+[node name="ParkingCanvas" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="ParkingCanvas"]
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(4.09184, 3.9325)
+text = "Find parking"
+
+[connection signal="body_entered" from="ParkingSpace" to="ParkingSpace" method="_on_body_entered"]

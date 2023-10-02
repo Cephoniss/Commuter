@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://8pi2h4p7frak"]
+
+[ext_resource type="Texture2D" uid="uid://brjnnab1d8y5i" path="res://obstacles/car.png" id="1_fb3y4"]
+[ext_resource type="Script" path="res://player_car.gd" id="1_mm2on"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vsjn5"]
+size = Vector2(84, 140.5)
+
+[node name="PlayerCar" type="CharacterBody2D" groups=["Player"]]
+rotation = 3.14159
+script = ExtResource("1_mm2on")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fb3y4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vsjn5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)

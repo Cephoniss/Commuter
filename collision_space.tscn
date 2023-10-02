@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddm7b03qx5bt2"]
+
+[ext_resource type="Script" path="res://collision_space.gd" id="1_eroos"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3f2kx"]
+
+[node name="CollisionSpace" type="Area2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_eroos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3f2kx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

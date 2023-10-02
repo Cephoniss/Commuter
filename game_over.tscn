@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1gbiwysicvwy"]
+
+[ext_resource type="Script" path="res://game_over.gd" id="1_jy2da"]
+[ext_resource type="Texture2D" uid="uid://b8hn2qe3am1yd" path="res://titlescreenforlimitedspace.png" id="1_mfg6n"]
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource("1_jy2da")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameOverBG" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/GameOverBG"]
+layout_mode = 0
+offset_right = 2480.0
+offset_bottom = 1216.0
+scale = Vector2(0.462801, 0.530354)
+texture = ExtResource("1_mfg6n")
+
+[node name="TextAndButtons" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 432.0
+offset_top = 181.0
+offset_right = 472.0
+offset_bottom = 221.0
+scale = Vector2(5.48061, 4.51305)
+
+[node name="GameOverText" type="Label" parent="CanvasLayer/TextAndButtons"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 0.182465
+offset_top = -5.31791
+offset_right = 87.1825
+offset_bottom = 20.6821
+scale = Vector2(0.4835, 0.421652)
+text = "Game Over"
+
+[node name="Tip" type="Label" parent="CanvasLayer/TextAndButtons"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -7.48091
+offset_top = 47.1965
+offset_right = 292.519
+offset_bottom = 73.1965
+scale = Vector2(0.242265, 0.384528)
+text = "Bumping into others will end the game"
+
+[node name="Restart" type="Button" parent="CanvasLayer/TextAndButtons"]
+layout_mode = 0
+offset_left = 1.88746
+offset_top = 11.0303
+offset_right = 66.8875
+offset_bottom = 42.0303
+scale = Vector2(0.612035, 0.444215)
+text = "Restart"
+
+[node name="Quit" type="Button" parent="CanvasLayer/TextAndButtons"]
+layout_mode = 0
+offset_left = 2.35933
+offset_top = 28.4948
+offset_right = 67.3593
+offset_bottom = 59.4948
+scale = Vector2(0.612035, 0.444215)
+text = "Quit
+"

@@ -1,0 +1,298 @@
+[gd_scene load_steps=12 format=3 uid="uid://dx1kj44gysb3v"]
+
+[ext_resource type="PackedScene" uid="uid://bvqs1j45jgg2r" path="res://sfx.tscn" id="1_7htf0"]
+[ext_resource type="Texture2D" uid="uid://diyv13hfmpcyv" path="res://levelmaps/trainstation.png" id="1_8djwh"]
+[ext_resource type="PackedScene" uid="uid://beblu21nmkjga" path="res://player.tscn" id="1_l0lg3"]
+[ext_resource type="PackedScene" uid="uid://cwx4c1cjrc08h" path="res://bgm.tscn" id="1_w3cnx"]
+[ext_resource type="Script" path="res://Area2D.gd" id="2_sq08c"]
+[ext_resource type="PackedScene" uid="uid://8fijesafb8tg" path="res://obstacle_person.tscn" id="4_ajypy"]
+[ext_resource type="Script" path="res://obstacle_person.gd" id="5_l2mtw"]
+[ext_resource type="Script" path="res://TrainCanvas.gd" id="6_2l2qp"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_760e8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2150"]
+size = Vector2(69.246, 50.3356)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_leco4"]
+size = Vector2(1003, 132)
+
+[node name="World2" type="Node2D"]
+position = Vector2(-1, 2)
+
+[node name="SFX" parent="." instance=ExtResource("1_7htf0")]
+
+[node name="BGM" parent="." instance=ExtResource("1_w3cnx")]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(423, 125)
+scale = Vector2(1000, 600)
+mesh = SubResource("QuadMesh_760e8")
+texture = ExtResource("1_8djwh")
+
+[node name="Player" parent="." instance=ExtResource("1_l0lg3")]
+position = Vector2(158, 209)
+
+[node name="TrainCanvas" type="CanvasLayer" parent="."]
+script = ExtResource("6_2l2qp")
+
+[node name="Label" type="Label" parent="TrainCanvas"]
+offset_left = 104.0
+offset_top = 225.0
+offset_right = 246.0
+offset_bottom = 251.0
+scale = Vector2(2, 2)
+text = "Get to the Train"
+uppercase = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-131, -173)
+scale = Vector2(1.02312, 0.894)
+script = ExtResource("2_sq08c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(776.623, 166.107)
+shape = SubResource("RectangleShape2D_y2150")
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="ObstaclePerson" parent="Obstacles" instance=ExtResource("4_ajypy")]
+
+[node name="ObstaclePerson2" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(-21, 37)
+
+[node name="ObstaclePerson3" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(-53, 54)
+
+[node name="ObstaclePerson4" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(32, -7)
+
+[node name="ObstaclePerson5" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(60, 2)
+
+[node name="ObstaclePerson6" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(93, -2)
+
+[node name="ObstaclePerson7" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(124, 11)
+
+[node name="ObstaclePerson8" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(156, -15)
+
+[node name="ObstaclePerson9" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(184, 38)
+
+[node name="ObstaclePerson10" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(216, 13)
+
+[node name="ObstaclePerson11" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(209, 69)
+
+[node name="ObstaclePerson12" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(251, -10)
+
+[node name="ObstaclePerson13" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(273, 21)
+
+[node name="ObstaclePerson14" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(309, -6)
+
+[node name="ObstaclePerson15" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(340, 22)
+
+[node name="ObstaclePerson16" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(371, -11)
+
+[node name="ObstaclePerson17" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(400, 17)
+
+[node name="ObstaclePerson18" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(428, 41)
+
+[node name="ObstaclePerson19" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(458, 15)
+
+[node name="ObstaclePerson20" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(484, 76)
+
+[node name="ObstaclePerson21" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(441, 87)
+
+[node name="ObstaclePerson22" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(504, 128)
+
+[node name="ObstaclePerson23" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(496, -3)
+
+[node name="ObstaclePerson24" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(533, 33)
+
+[node name="ObstaclePerson25" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(571, 6)
+
+[node name="ObstaclePerson26" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(608, 33)
+
+[node name="ObstaclePerson27" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(723, -5)
+
+[node name="ObstaclePerson28" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(752, 44)
+
+[node name="ObstaclePerson29" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(788, 7)
+
+[node name="ObstaclePerson30" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(828, 0)
+
+[node name="ObstaclePerson31" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(867, 15)
+
+[node name="ObstaclePerson32" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(904, 43)
+
+[node name="ObstaclePerson33" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(229, 241)
+
+[node name="ObstaclePerson34" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(252, 283)
+
+[node name="ObstaclePerson35" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(277, 198)
+
+[node name="ObstaclePerson36" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(315, 146)
+script = ExtResource("5_l2mtw")
+move_dir = Vector2(0, -60)
+
+[node name="ObstaclePerson37" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(281, 351)
+
+[node name="ObstaclePerson38" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(315, 395)
+
+[node name="ObstaclePerson39" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(481, 237)
+
+[node name="ObstaclePerson40" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(509, 253)
+
+[node name="ObstaclePerson41" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(543, 232)
+
+[node name="ObstaclePerson42" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(541, 151)
+
+[node name="ObstaclePerson43" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(583, 243)
+
+[node name="ObstaclePerson44" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(617, 299)
+
+[node name="ObstaclePerson45" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(651, 341)
+
+[node name="ObstaclePerson46" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(679, 283)
+
+[node name="ObstaclePerson47" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(712, 220)
+
+[node name="ObstaclePerson48" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(838, 273)
+
+[node name="ObstaclePerson50" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(877, 245)
+
+[node name="ObstaclePerson51" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(908, 200)
+
+[node name="ObstaclePerson52" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(793, 144)
+script = ExtResource("5_l2mtw")
+move_dir = Vector2(-50, 0)
+
+[node name="ObstaclePerson53" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(171, 307)
+
+[node name="ObstaclePerson54" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(148, 346)
+
+[node name="ObstaclePerson55" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(111, 325)
+
+[node name="ObstaclePerson56" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(71, 290)
+
+[node name="ObstaclePerson57" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(51, 323)
+
+[node name="ObstaclePerson58" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(42, 145)
+script = ExtResource("5_l2mtw")
+move_dir = Vector2(55, 0)
+
+[node name="ObstaclePerson59" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(14, 178)
+
+[node name="ObstaclePerson60" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(-21, 167)
+
+[node name="ObstaclePerson61" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(-10, 198)
+
+[node name="ObstaclePerson62" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(348, 409)
+
+[node name="ObstaclePerson63" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(394, 289)
+
+[node name="ObstaclePerson64" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(428, 309)
+
+[node name="ObstaclePerson65" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(468, 312)
+script = ExtResource("5_l2mtw")
+move_dir = Vector2(0, 50)
+
+[node name="ObstaclePerson49" parent="Obstacles" instance=ExtResource("4_ajypy")]
+position = Vector2(799, 228)
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Wall" type="StaticBody2D" parent="Environment"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Wall"]
+position = Vector2(421.5, -107)
+shape = SubResource("RectangleShape2D_leco4")
+
+[node name="Wall2" type="StaticBody2D" parent="Environment"]
+position = Vector2(1, 589)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Wall2"]
+position = Vector2(421.5, -107)
+shape = SubResource("RectangleShape2D_leco4")
+
+[node name="Wall3" type="StaticBody2D" parent="Environment"]
+position = Vector2(-275, 766)
+scale = Vector2(0.24, 5.04)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Wall3"]
+position = Vector2(421.5, -107)
+shape = SubResource("RectangleShape2D_leco4")
+
+[node name="Wall4" type="StaticBody2D" parent="Environment"]
+position = Vector2(934, 765)
+scale = Vector2(0.24, 5.04)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Wall4"]
+position = Vector2(421.5, -107)
+shape = SubResource("RectangleShape2D_leco4")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Timer2" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="TrainCanvas" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="Area2D" method="_on_timer_2_timeout"]

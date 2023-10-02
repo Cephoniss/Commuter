@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc6gl1qy8pw7u"]
+
+[ext_resource type="Texture2D" uid="uid://dlqq2yxfo8pt1" path="res://endscreenforcommuter.png" id="1_disgh"]
+[ext_resource type="Script" path="res://game_end_screen.gd" id="1_xs0qh"]
+
+[node name="GameEndScreen" type="CanvasLayer"]
+script = ExtResource("1_xs0qh")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 2477.0
+offset_bottom = 1216.0
+scale = Vector2(0.469902, 0.533217)
+texture = ExtResource("1_disgh")
+
+[node name="Label" type="Label" parent="Control"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 384.0
+offset_top = 183.0
+offset_right = 557.0
+offset_bottom = 209.0
+scale = Vector2(1.95115, 3.49434)
+text = "Mewpo made it home!"
+
+[node name="Quit" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 308.0
+offset_right = 459.0
+offset_bottom = 316.0
+scale = Vector2(4.01339, 2.70624)
+text = "Quit"

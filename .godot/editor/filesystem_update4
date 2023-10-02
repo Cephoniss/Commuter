@@ -1,0 +1,11 @@
+res://main_menu.tscn
+res://world.tscn
+res://world_2.tscn
+res://world_3.tscn
+res://player.tscn
+res://collision_space.tscn
+res://obstacle_person.tscn
+res://obstacle_car.tscn
+res://player_car.tscn
+res://game_over.tscn
+res://game_end_screen.tscn
